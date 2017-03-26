@@ -2,9 +2,25 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="icon" href="logo.jpg">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Weather Web</title>
+        <title>Background Gradient</title>
+        <style type="text/css">
+            
+            body {
+                background: linear-gradient(132deg, #ec5218, #1665c1);
+                background-size: 400% 400%;
+                animation: BackgroundGradient 30s ease infinite;
+            }
+            
+            @keyframes BackgroundGradient {
+                0% {background-position: 0% 50%;}
+                50% {background-position: 100% 50%;}
+                100% {background-position: 0% 50%;}
+            }
+            
+            
+            
+        </style>
         <style type="text/css">
             
             * {
@@ -13,9 +29,6 @@
             }
             body {
                 background-color: #000;
-                background-image: url("image.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
             }
             .fly-in-text {
                 list-style: none;
@@ -48,54 +61,15 @@
             .fly-in-text.hidden li:nth-child(6) { transform: translateX(20px) translateY(-20px); }
             .fly-in-text.hidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
             
-         	 .button {
-
-     	 	   position: absolute;
-     	 	   top: 56%;
-     	 	   left: 43%;
-
-			  border-radius: 4px;
-			  background-color: transparent;
-			  border: none;
-			  color: #FFFFFF;
-			  text-align: center;
-			  font-size: 20px;
-			  padding: 20px;
-			  width: 200px;
-			  transition: all 0.5s;
-			  cursor: pointer;
-			  margin: 5px;
-			}
-
-			.button span {
-			  cursor: pointer;
-			  display: inline-block;
-			  position: relative;
-			  transition: 0.5s;
-			}
-
-			.button span:after {
-			  content: '\00bb';
-			  position: absolute;
-			  opacity: 0;
-			  top: 0;
-			  right: -20px;
-			  transition: 0.5s;
-			}
-
-			.button:hover span {
-			  padding-right: 25px;
-			}
-
-			.button:hover span:after {
-			  opacity: 1;
-			  right: 0;
-			}
+            
         </style>
     </head>
     <body>
-
-        <ul class="fly-in-text hidden">
+        
+        
+        <div class="content">
+            <div class="parallax-bg">
+                <ul class="fly-in-text hidden">
             <li>W</li>
             <li>E</li>
             <li>L</li>
@@ -118,7 +92,11 @@
             })();
             
         </script>
-        <a href="index1.html" ><button class="button"><span>Get Started</span></button></a>
+
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript"></script>
 
     </body>
 </html>

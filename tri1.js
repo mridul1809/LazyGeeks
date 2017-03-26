@@ -12,15 +12,13 @@ $(document).ready(function(){
 				dataType: "jsonp" ,
 				success : function(data)
 				{
-					var widget = show(data);
-					$("#show").html(widget);
-					$("#city").val('');
+					alert(show(data));
 				}
 			});
 		}
 		else
 		{
-			$("#error").html('Field Cannot Be Empty!!!');
+			alert("Please Enter A City");
 		}
 
 
@@ -30,14 +28,14 @@ $(document).ready(function(){
 
 function show(data)
 {
-	return 	"<h1>Current Weather for " + data.name + ", " + data.sys.country + "</h1>" +
-			"<h2><strong>Weather</strong> : "+ data.weather[0].main +"</h2>" + 
-			"<h2><strong>Description</strong> : "+ data.weather[0].description +"</h2>" + 
-			"<h2><strong>Temperature</strong> : "+ data.main.temp +" C</h2>" + 
-			"<h2><strong>Pressure</strong> : "+ data.main.pressure +"</h2>" + 
-			"<h2><strong>Humidity</strong> : "+ data.main.humidity +"</h2>" + 
-			"<h2><strong>Minimum Temperature</strong> : "+ data.main.temp_min +"C</h2>" + 
-			"<h2><strong>Maximum Temperature</strong> : "+ data.main.temp_max +"C</h2>" + 
-			"<h2><strong>Wind Speed</strong> : "+ data.wind.speed +"</h2>" + 
-			"<h2><strong>Wind Direction</strong> : "+ data.wind.deg +"</h2>";
+	return 	"Current Weather for " + data.name + ", " + data.sys.country+"\n\n"+
+			"Weather : "+ data.weather[0].main + "\n\n" +
+			"Description : "+ data.weather[0].description +"\n\n" + 
+			"Temperature : "+ data.main.temp +" ℃\n\n" +
+			"Pressure : "+ data.main.pressure +"\n\n" + 
+			"Humidity : "+ data.main.humidity +"\n\n" + 
+			"Minimum Temperature : "+ data.main.temp_min +" ℃\n\n" + 
+			"Maximum Temperature : "+ data.main.temp_max +" ℃\n\n" + 
+			"Wind Speed : "+ data.wind.speed +"kmph\n\n" + 
+			"Wind Direction : "+ data.wind.deg +"\n";
 }

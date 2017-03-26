@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MRIDUL</title>
+	<link rel="stylesheet" type="text/css" href="new1.css">
+	<title>Weather Web</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="icon" href="logo.jpg">
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,38 +13,68 @@
   <style type="text/css">
   	body
   	{
-  		background-image: url("Weather Desktop Backgrounds - Wallpaper Cave.jpg");
+  		background-image: url("try1.jpg");
   		background-size: cover;
   		background-repeat: no-repeat; 
   	}
+  	.w3-round-large
+  	{
+  				background: none;
+  				border : none;
+  				width: 100px;
+  				height: 30px;
+  				position: absolute;
+  				left: 90%;
+  				top: 90%;
+  				color: white;
+  	}
+  	.w3-round-large:hover
+  	{
+  		transform: translateY(-4px);
+  	}
+
   	.button {
-  		position: absolute;
-  		left: 40%;
-  		top : 15%;
-	  padding: 10px 15px;
-	  font-size: 20px;
-	  text-align: center;
-	  cursor: pointer;
-	  border-width: 2px;
-	  border-color: white;
-	  color: #fff;
-	  background-color:transparent;
-	  border-radius: 15px;
-	  box-shadow: 0 9px #999;
-	}
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;	
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    left: 43%;
+    top: 50%;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
 
-	.button:hover {background-color:transparent;}
+.button:after {
+    content: "";
+    background: grey;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
 
-	.button:active {
-	  background-color: transparent;
-	  box-shadow: 0 5px #666;
-	  transform: translateY(4px);
-	}
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
 	input[type=text] {
 		color: white;
 		position: absolute;
-		top : 2%;
-		left : 30%;
+		top : 40%;
+		left : 35%;
     width: 430px;	
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -55,16 +88,41 @@
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out ease-out-in;
 }
-  </style>
+.span 
+    {
+    	font-size: 30px;
+    	position: absolute;
+    	left: 30%;
+    	top : 40%;
+    	color: white;
+
+    }
+.span:hover {
+	color: grey;
+	transform: translateY(4px);
+}
+.answer
+{
+	position: absolute;
+	top : 27%;
+	left: 30%;
+	color : #000066;
+}
+</style>
 </head>
 <body>
+<script src="new2.js"></script>
+<h1>
+  <a href="" class="typewrite" data-period="2000" data-type='[ "Weather_Web", "by Lazy_Geeks"  ]'>
+    <span class="wrap"></span>
+  </a>
+</h1>
 <div>
 	<input type="text" name="city" id="city" placeholder="Search City" />
 	<br/><br/>
-	<button id="submit" class="button">What's the weather?</button>
+	<button id="submit" class="button">Get Weather</button>
 </div>
-<div id="show"></div>
-<button class="aboutus"><img src="about-icon.png"></button>
 <script src="tri1.js"></script>
+<a href="aboutus.html"><button class="w3-round-large"><strong>About Us</strong></button></a>
 </body>
 </html>
