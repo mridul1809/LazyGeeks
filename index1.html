@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<!--(2nd) Page using API for showing weather.This page is linked to "index.html" nad is the core page for functionality-->
 <html>
 <head>
-	<title>Weather Web</title>
-	<link rel="icon" href="logo.jpg">
+	<title>MRIDUL</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,7 +10,7 @@
   <style type="text/css">
   	body
   	{
-  		background-image: url("try.jpg");
+  		background-image: url("Weather Desktop Backgrounds - Wallpaper Cave.jpg");
   		background-size: cover;
   		background-repeat: no-repeat; 
   	}
@@ -57,56 +55,16 @@
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out ease-out-in;
 }
-.span 
-    {
-    	font-family: Arial, Helvetica, sans-serif;
-    	font-size: 30px;
-    	position: absolute;
-    	left: 30%;
-    	top : 30%;
-    	color: white;
-
-    }
-.span:hover {
-	color: grey;
-	transform: translateY(4px);
-}
-.answer
-{
-	position: absolute;
-	top : 27%;
-	left: 30%;
-	color : #000066;
-}
-.about
-{
-	border-left: white;
-	position: absolute;
-	left : 85%;
-	top : 90%;
-	background-color: transparent;
-	border: none;
-	width:100px ;
-	height: 30px;
-	color : white;
-}
-.about:hover
-{
-	transform: translateY(-4px);
-	color: grey;
-}
-</style>
+  </style>
 </head>
 <body>
 <div>
 	<input type="text" name="city" id="city" placeholder="Search City" />
 	<br/><br/>
-	<button id="submit" class="button">Get Weather</button>
-	<br/><br/>
-	<span id="error" class = "span"></span>
+	<button id="submit" class="button">What's the weather?</button>
 </div>
-<div id="show" class="answer"></div>
+<div id="show"></div>
+<button class="aboutus"><img src="about-icon.png"></button>
 <script src="tri1.js"></script>
-<a href="aboutus.html" class="about"><button class="about" >  About Us  </button></a>
 </body>
 </html>
